@@ -78,61 +78,21 @@ E-cards/
 
 #### 1. Clone o repositório
 ```bash
-git clone https://github.com/yagoal54/e-cards-database.git
-cd e-cards-database
+git clone https://github.com/yagoalt54/E-Cards-Database-Pokemon-TCG-Collection.git
 ```
 
-#### 2. Crie o banco de dados
-```sql
-CREATE DATABASE db_tcpokemon_cards;
-USE db_tcpokemon_cards;
-```
+2. **Execute os scripts na ordem:**
+   - `db_scripts/tabelas/01_Card_table.sql` → Cria as tabelas
+   - `db_scripts/seeds/01_Initial_seed.sql` → Dados iniciais
+   - `db_scripts/seeds/02_bulk_cards_01.sql` → Cartas (Lote 1)
+   - `db_scripts/seeds/03_bulk_cards_02.sql` → Cartas (Lote 2)
+   - `db_scripts/seeds/04_bulk_cards_03.sql` → Cartas (Lote 3)
+   - `db_scripts/Views/01_view_cards.sql` → Cria as views
 
-#### 3. Execute os scripts em ordem
-
-**Opção A - Usando PowerShell (Windows)**
-```powershell
-cd db_scripts/Migration
-./to_migration.ps1
-```
-
-**Opção B - Manualmente via MySQL**
-```bash
-# Criar tabelas
-mysql -u seu_usuario -p db_tcpokemon_cards < db_scripts/tabelas/01_Card_table.sql
-
-# Inserir dados iniciais
-mysql -u seu_usuario -p db_tcpokemon_cards < db_scripts/seeds/01_Initial_seed.sql
-mysql -u seu_usuario -p db_tcpokemon_cards < db_scripts/seeds/02_bulk_cards_01.sql
-mysql -u seu_usuario -p db_tcpokemon_cards < db_scripts/seeds/03_bulk_cards_02.sql
-mysql -u seu_usuario -p db_tcpokemon_cards < db_scripts/seeds/04_bulk_cards_03.sql
-
-# Criar views
-mysql -u seu_usuario -p db_tcpokemon_cards < db_scripts/Views/01_view_cards.sql
-```
-
-### Exemplos de Consultas
-
-#### Listar todas as cartas com informações completas
-```sql
-SELECT * FROM vw_cards_full_info;
-```
-
-#### Cartas de um tipo específico
-```sql
-SELECT * FROM vw_cards_full_info WHERE type_name = 'Fire';
-```
-
-#### Cartas da coleção Base Set
-```sql
-SELECT * FROM vw_cards_full_info WHERE collection_name = 'Base Set';
-```
-
-#### Cartas por estágio de evolução
-```sql
-SELECT * FROM vw_cards_full_info WHERE stage_name = 'Basic';
-```
+   Para cada arquivo: **File → Open SQL Script** → Selecione o arquivo → **Execute** (⚡)
 
 ## 🎓 Créditos
 
 Este projeto foi desenvolvido com base nas melhores práticas de modelagem de dados e foi orientado pela [**DIO (Digital Innovation One)**], uma plataforma de 
+
+Desenvolvido por Yago Alves Toledo ( https://github.com/yagoalt54 )

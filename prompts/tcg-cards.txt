@@ -1,0 +1,30 @@
+[Ação]
+create a script to create a table in OracleLive freeSQL
+
+[Contexto]
+- the first table is a table to save a pokemon tcg cards
+- the seconde table is a table to save collections set 
+
+Connect to tables with foreign key
+
+
+[Informações]
+first table: tbl_cards
+- id
+- HP
+- name
+- type 
+- stage 
+- info 
+- attack 
+- dammage
+- weak 
+- ressis.
+- retreat
+- cardnumberincollection
+
+second table: tbl_collections
+- id 
+- CollectionSetName 
+- realese Date 
+- TotalCardsInCollection

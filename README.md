@@ -93,6 +93,6 @@ git clone https://github.com/yagoalt54/E-Cards-Database-Pokemon-TCG-Collection.g
 
 ## 🎓 Créditos
 
-Este projeto foi desenvolvido com base nas melhores práticas de modelagem de dados e foi orientado pela [**DIO (Digital Innovation One)**], uma plataforma de 
+Este projeto foi desenvolvido com base nas melhores práticas de modelagem de dados e foi orientado pela **DIO (Digital Innovation One)**.
 
 Desenvolvido por Yago Alves Toledo ( https://github.com/yagoalt54 )
